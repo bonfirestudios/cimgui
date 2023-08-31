@@ -3322,6 +3322,7 @@ CIMGUI_API void igBulletText(const char* fmt,...);
 CIMGUI_API void igBulletTextV(const char* fmt,va_list args);
 CIMGUI_API void igSeparatorText(const char* label);
 CIMGUI_API bool igButton(const char* label,const ImVec2 size);
+CIMGUI_API bool igButtonXY(const char* label,float x, float y);
 CIMGUI_API bool igSmallButton(const char* label);
 CIMGUI_API bool igInvisibleButton(const char* str_id,const ImVec2 size,ImGuiButtonFlags flags);
 CIMGUI_API bool igArrowButton(const char* str_id,ImGuiDir dir);
@@ -3443,6 +3444,7 @@ CIMGUI_API bool igBeginPopupContextWindow(const char* str_id,ImGuiPopupFlags pop
 CIMGUI_API bool igBeginPopupContextVoid(const char* str_id,ImGuiPopupFlags popup_flags);
 CIMGUI_API bool igIsPopupOpen_Str(const char* str_id,ImGuiPopupFlags flags);
 CIMGUI_API bool igBeginTable(const char* str_id,int column,ImGuiTableFlags flags,const ImVec2 outer_size,float inner_width);
+CIMGUI_API bool igBeginTableXY(const char* str_id,int column,ImGuiTableFlags flags,float outer_size_x, float outer_size_y,float inner_width);
 CIMGUI_API void igEndTable(void);
 CIMGUI_API void igTableNextRow(ImGuiTableRowFlags row_flags,float min_row_height);
 CIMGUI_API bool igTableNextColumn(void);

@@ -630,6 +630,10 @@ CIMGUI_API bool igButton(const char* label,const ImVec2 size)
 {
     return ImGui::Button(label,size);
 }
+CIMGUI_API bool igButtonXY(const char* label,float x, float y)
+{
+    return ImGui::Button(label,ImVec2(x,y));
+}
 CIMGUI_API bool igSmallButton(const char* label)
 {
     return ImGui::SmallButton(label);
@@ -1135,6 +1139,10 @@ CIMGUI_API bool igIsPopupOpen_Str(const char* str_id,ImGuiPopupFlags flags)
 CIMGUI_API bool igBeginTable(const char* str_id,int column,ImGuiTableFlags flags,const ImVec2 outer_size,float inner_width)
 {
     return ImGui::BeginTable(str_id,column,flags,outer_size,inner_width);
+}
+CIMGUI_API bool igBeginTableXY(const char* str_id,int column,ImGuiTableFlags flags,float outer_size_x, float outer_size_y,float inner_width)
+{
+    return ImGui::BeginTable(str_id,column,flags,ImVec2(outer_size_x, outer_size_y),inner_width);
 }
 CIMGUI_API void igEndTable()
 {
