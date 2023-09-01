@@ -204,9 +204,17 @@ CIMGUI_API void igSetNextWindowPos(const ImVec2 pos,ImGuiCond cond,const ImVec2 
 {
     return ImGui::SetNextWindowPos(pos,cond,pivot);
 }
+CIMGUI_API void igSetNextWindowPosXY(float posX, float posY, ImGuiCond cond, float pivotX, float pivotY)
+{
+    return ImGui::SetNextWindowPos(ImVec2(posX, posY),cond,ImVec2(pivotX, pivotY));
+}
 CIMGUI_API void igSetNextWindowSize(const ImVec2 size,ImGuiCond cond)
 {
     return ImGui::SetNextWindowSize(size,cond);
+}
+CIMGUI_API void igSetNextWindowSizeXY(float sizeX, float sizeY, ImGuiCond cond)
+{
+    return ImGui::SetNextWindowSize(ImVec2(sizeX, sizeY),cond);
 }
 CIMGUI_API void igSetNextWindowSizeConstraints(const ImVec2 size_min,const ImVec2 size_max,ImGuiSizeCallback custom_callback,void* custom_callback_data)
 {
@@ -215,6 +223,10 @@ CIMGUI_API void igSetNextWindowSizeConstraints(const ImVec2 size_min,const ImVec
 CIMGUI_API void igSetNextWindowContentSize(const ImVec2 size)
 {
     return ImGui::SetNextWindowContentSize(size);
+}
+CIMGUI_API void igSetNextWindowContentSizeXY(float sizeX, float sizeY)
+{
+    return ImGui::SetNextWindowContentSize(ImVec2(sizeX, sizeY));
 }
 CIMGUI_API void igSetNextWindowCollapsed(bool collapsed,ImGuiCond cond)
 {
