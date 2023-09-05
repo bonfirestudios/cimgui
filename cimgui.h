@@ -3314,6 +3314,7 @@ CIMGUI_API void igTextUnformatted(const char* text,const char* text_end);
 CIMGUI_API void igText(const char* fmt,...);
 CIMGUI_API void igTextV(const char* fmt,va_list args);
 CIMGUI_API void igTextColored(const ImVec4 col,const char* fmt,...);
+CIMGUI_API void igTextColoredRGBA(float r, float g, float b, float a,const char* fmt,...);
 CIMGUI_API void igTextColoredV(const ImVec4 col,const char* fmt,va_list args);
 CIMGUI_API void igTextDisabled(const char* fmt,...);
 CIMGUI_API void igTextDisabledV(const char* fmt,va_list args);

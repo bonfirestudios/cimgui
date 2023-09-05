@@ -586,6 +586,13 @@ CIMGUI_API void igTextColored(const ImVec4 col,const char* fmt,...)
     ImGui::TextColoredV(col,fmt,args);
     va_end(args);
 }
+CIMGUI_API void igTextColoredRGBA(float r, float g, float b, float a,const char* fmt,...)
+{
+    va_list args;
+    va_start(args, fmt);
+    ImGui::TextColoredV(ImVec4(r, g, b, a),fmt,args);
+    va_end(args);
+}
 CIMGUI_API void igTextColoredV(const ImVec4 col,const char* fmt,va_list args)
 {
     return ImGui::TextColoredV(col,fmt,args);
